@@ -1,0 +1,18 @@
+.terminos{
+    text-align: center;
+    font-size: $textXxs;
+    line-height: $lineHeightXxs;
+    color: $white;
+    /*margin: 8%;*/
+    span{
+        text-decoration: underline;
+        text-transform: capitalize;
+        a{
+            color: $color5;
+            &:hover{
+                color: $dark;
+                transition: backgraound-color .7s ease-out;
+            }
+        }
+    }
+}

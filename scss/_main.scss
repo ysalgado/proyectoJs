@@ -1,0 +1,46 @@
+.programs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @mixin text ($size, $weight, $text-transf, $color){
+        font-size: $size;
+        font-weight: $weight;
+        text-transform: $text-transf;
+        color: $color;
+    }
+    .emba{
+        border: 1px solid $color1;
+        margin: 10% 3% 3% 3%;
+        padding: 2% 20% 2% 20%;
+        border-radius: 5px;
+        a{
+            text-decoration: none;
+            @include text ($textSm, $regular, uppercase, $dark)
+        }
+    }
+    .mba{
+        border: 1px solid $color1;
+        box-sizing: border-box;
+        margin: 3%;
+        padding: 1% 20% 2% 20%;
+        border-radius: 5px;
+        a{
+            text-decoration: none;
+            @include text ($textSm, $regular, uppercase, $dark)
+        }
+    }
+    .pej{
+        border: 1px solid $color1;
+        margin: 3%;
+        padding: 1% 20% 2% 20%;
+        border-radius: 5px;
+        a{
+            line-height: $lineHeightSm;
+            text-align: center;
+            text-decoration: none;
+            @include text ($textSm, $regular, uppercase, $dark)
+            
+        }
+    }
+}

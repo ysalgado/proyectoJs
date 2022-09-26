@@ -1,0 +1,29 @@
+.nav{
+    margin: 0%;
+    padding: 0%;
+    background-color: $bgGeneral;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a{
+        .logo{
+            width: 20%;
+        }
+    }
+    .menu{
+        .ul{
+            display: flex;
+            li{
+                list-style: none;
+                font-size: $textXxs;
+                a{
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+            
+        }
+        
+    }
+}
+

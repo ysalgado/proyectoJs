@@ -1,0 +1,69 @@
+.body{
+    font-family: $font1;
+    display: grid;
+    place-items: center;
+    background: $bgGeneral;
+    .wrapper{
+        width: 75%;
+    }
+    form{
+        padding: 30px 20px 25px 20px;
+        .row{
+            padding: 2.5%;
+            background: $bgGeneral;
+            margin-bottom: 4%;
+            position: relative;
+            input{
+                margin-left: 18%;
+                width: 80%;
+                padding: .5%;
+                background-color: $bgGeneral;
+                border: none;
+                outline: 0;
+                border-bottom: solid 1px $white;
+            }
+            i{
+                position: absolute;
+                width: 15%;
+                display: flex;
+                align-items:center;
+                justify-content:left;
+            }
+            .fa-solid{
+                color: $white;
+                padding: 0.1em;
+            }
+        }
+        .button{
+            input{
+                margin: 10% 0 5% 0;
+                width: 100%;
+                padding: 2.5%;
+                border-radius: 7%;
+                border: none;
+                background-color: $white;
+                color: $dark;
+                text-transform: uppercase;
+                font-weight: $bold;
+                &:hover{
+                    color: $dark;
+                    background-color: $color6;
+                    transition: backgraound-color .7s ease-out;
+                }
+            }
+        }
+        .pass{
+            a{
+            text-decoration: none;
+            color: $white;
+            padding: 2.5%;
+            font-size: $textXxs;
+            &:hover{
+                color: $dark;
+                transition: backgraound-color .7s ease-out;
+                }
+            }
+        }
+    }
+}
+
