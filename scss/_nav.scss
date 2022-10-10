@@ -1,29 +1,48 @@
-.nav{
-    margin: 0%;
-    padding: 0%;
-    background-color: $bgGeneral;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    a{
-        .logo{
-            width: 20%;
-        }
-    }
-    .menu{
-        .ul{
-            display: flex;
-            li{
-                list-style: none;
-                font-size: $textXxs;
-                a{
-                    text-decoration: none;
-                    color: $white;
-                }
+
+.navbar{
+    .container-fluid{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 0;
+        .navbar-brand{
+            .logo{
+                padding: 0;
+                width: 30%;
+                margin-right: auto;
             }
-            
         }
-        
+        #button{
+            margin-right: 2%;
+            font-size: $textMd; 
+        }
     }
 }
 
+@media (min-width: 768px){
+    .container-fluid{
+        .logo{
+            width: 50%;
+        }
+        .navbar-toggler-icon{
+            font-size: $textMd;    
+        }
+    }
+    
+}
+
+@media (min-width: 1024px){
+    .container-fluid{
+        .logo{
+            width: 40%;
+        }
+    }
+    #navbarSupportedContent{
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    font-size: $textMd;
+            }
+        }
+    }
+}
+}

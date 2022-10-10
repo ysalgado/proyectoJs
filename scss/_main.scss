@@ -1,8 +1,8 @@
 .programs{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    text-align: center;
     @mixin text ($size, $weight, $text-transf, $color){
         font-size: $size;
         font-weight: $weight;
@@ -11,11 +11,10 @@
     }
     .emba{
         border: 1px solid $color1;
-        margin: 10% 3% 3% 3%;
-        padding: 2% 20% 2% 20%;
         border-radius: 5px;
         a{
             text-decoration: none;
+            text-align: center;
             @include text ($textSm, $regular, uppercase, $dark)
         }
     }
@@ -23,7 +22,6 @@
         border: 1px solid $color1;
         box-sizing: border-box;
         margin: 3%;
-        padding: 1% 20% 2% 20%;
         border-radius: 5px;
         a{
             text-decoration: none;
@@ -33,14 +31,16 @@
     .pej{
         border: 1px solid $color1;
         margin: 3%;
-        padding: 1% 20% 2% 20%;
+        padding: 0;
         border-radius: 5px;
         a{
             line-height: $lineHeightSm;
-            text-align: center;
             text-decoration: none;
             @include text ($textSm, $regular, uppercase, $dark)
             
         }
     }
+}
+#button{
+    margin: 2% 25% 8% 25% ;
 }
