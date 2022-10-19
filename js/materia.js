@@ -1,46 +1,59 @@
 
-
-/*let quieroInscribirme = document.getElementById("button").onclick=prompt ("Estas seguro de inscribirte?")*/
-
-
-let materiaInternacional1 = {
+const materiasInternacionales = [
+    {
+    id: 1,
     nombre: "economia internacional",
     cupo: 20,
     modalidad: "presencial",
-}
-
-let materiaInternacional2 = {
+},
+{
+    id: 2,
     nombre: "ejecucion y control en entornos inciertos",
     cupo: 30,
     modalidad: "hibrida",
+},
+{
+    id: 3,
+    nombre: "integral entreprenership",
+    cupo: 25,
+    modalidad: "online",
+},
+{
+    id: 4,
+    nombre: "asset managment",
+    cupo: 25,
+    modalidad: "online",
 }
+]
 
+let button = document.getElementById ("button")
+button.addEventListener ("click", inscripcion)
 
-let cupo = 0
+materiasInternacionales.forEach((mei) => {
+    //CUPO
     
-function materia () {
-    let respuesta = prompt ("Ingresa la materia optativa Internacional a la que queres inscribirte");
-    if (respuesta == "economia internacional"){
-        alert("ok")
-    } else if (respuesta !== "economia"){
-        alert ("Lo siento ingresaste una materia incorrecta")
-    }
-        if (respuesta == "economia internacional" && cupo <= 20){
-        cupo = cupo +1;
-        alert("inscripto!")
-    } else if (respuesta !== "economia internacional") {
-        alert ("Selecciona otra materia.")
-    }
-    else {
-        alert ("No hay mas cupo para la materia.")
-    }
-    return respuesta
+    //BOTON
+    button.setAttribute('cupo', mei.id)
+    button.addEventListener('click', inscripcion)
+
+})
+let cupoMateria1 = 0
+    
+function inscripcion () {
+    let materiaElegida = materiasInternacionales ["id"]
+    if (materiaElegida == cupoMateria1 <= 20){
+        cupoMateria1 = cupoMateria1 +1;
+        console.log ("inscripto")
+    } 
+    else if (materiaElegida == cupoMateria1 >= 20){
+        console.log ("No hay mas cupo para la materia.")
+}
 }
 
-materia()
-console.log (cupo)
 
-function materia2 () {
+
+
+/*function materia2 () {
     let respuesta2 = prompt ("Ingresa la materia optativa Regular a la que queres inscribirte");
     if (respuesta2 == "bitcoin"){
         alert("ok")
@@ -63,12 +76,10 @@ function materia2 () {
 materia2()
 console.log (cupo)
 
-    alert ("Felicitaciones! te inscribiste a las materias" (respuesta + respuesta2))
+    alert ("Felicitaciones! te inscribiste a las materias" (respuesta + respuesta2))*/
 
 
-
-
-
+    
 
 
 
