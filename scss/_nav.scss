@@ -1,5 +1,6 @@
 
 .navbar{
+    background-color: $bgGeneral;
     .container-fluid{
         margin-top: 5%;
         margin-bottom: 5%;
@@ -7,13 +8,16 @@
         .navbar-brand{
             .logo{
                 padding: 0;
-                width: 30%;
-                margin-right: auto;
+                width: 20%;
             }
         }
         #button{
             margin-right: 2%;
             font-size: $textMd; 
+            .navbar-toggler{
+                width: 10%;
+            }
+            
         }
     }
 }
