@@ -41,6 +41,13 @@
         }
     }
 }
-#button{
-    margin: 2% 25% 8% 25% ;
+
+.card-body{
+    box-shadow: 0 0 20px 0 $color7;
+    .card-title{
+        color: $color1;
+    }
+    .card-text{
+        color: $color7; 
+    }
 }
