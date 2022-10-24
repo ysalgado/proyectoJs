@@ -42,12 +42,21 @@
     }
 }
 
+
 .card-body{
-    box-shadow: 0 0 20px 0 $color7;
+    box-shadow: 0 0 8px 0 $color7;
+    border-radius: 5px;
     .card-title{
         color: $color1;
     }
     .card-text{
         color: $color7; 
     }
+}
+#items{
+    margin: 5% 0 10% 1%;
+}
+#aside{
+    display: grid;
+    
 }

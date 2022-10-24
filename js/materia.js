@@ -2,37 +2,43 @@
 const materiasInternacionales = [
     {
     id: 1,
-    nombre: "economia internacional",
+    nombre: "Economia Internacional",
     cupo: 20,
-    modalidad: "presencial",
+    modalidad: "Presencial",
 },
 {
     id: 2,
-    nombre: "ejecucion y control en entornos inciertos",
+    nombre: "Ejecucion y Control en entornos inciertos",
     cupo: 30,
-    modalidad: "hibrida",
+    modalidad: "Híbrida",
 },
 {
     id: 3,
-    nombre: "integral entreprenership",
+    nombre: "Integral Entreprenership",
     cupo: 25,
-    modalidad: "online",
+    modalidad: "Online",
 },
 {
     id: 4,
-    nombre: "asset managment",
+    nombre: "Asset Managment",
     cupo: 25,
-    modalidad: "online",
+    modalidad: "Online",
 }
 ]
 
 let ofertaAcademica = document.getElementById('items')
-/*let button = document.getElementById ("button")
-button.addEventListener ("click", inscripcion)*/
+let course = document.getElementById("course")
+/*let buttonEliminar = document.getElementById('eliminar')*/
+let misMaterias = []
+
+/*buttonEliminar.addEventListener('click', emptyButtonHandler)*/
+
+loadCourseFromStorage()
+renderCourse()
 
 materiasInternacionales.forEach((mei) => {
     let container = document.createElement('div')
-    container.classList.add('card', 'col-sm-4')
+    container.classList.add('card', 'col-xs-4')
     //Body
     let cardBody = document.createElement("div")
     cardBody.classList.add('card-body')
@@ -46,7 +52,7 @@ materiasInternacionales.forEach((mei) => {
     cardCupo.innerText = `Vacantes: ${mei.cupo}`
     //BOTON
     let cardButton= document.createElement("button")
-    cardButton.classList.add('btn', 'btn-secondary')
+    cardButton.classList.add('btn', 'btn-outline-secondary')
     cardButton.innerText = `Quiero inscribirme`
     button.setAttribute('cupo', mei.id)
     button.addEventListener('click', inscripcion)
@@ -55,23 +61,26 @@ materiasInternacionales.forEach((mei) => {
     cardBody.append(cardCupo)
     cardBody.append(cardButton)
     container.append(cardBody)
-    catalog.append(container)
+    ofertaAcademica.append(container)
 
 })
 
-    
-/*function inscripcion () {
-    let materiaElegida = materiasInternacionales ["id"]
-    if (materiaElegida == cupoMateria1 <= 20){
-        cupoMateria1 = cupoMateria1 +1;
-        console.log ("inscripto")
-    } 
-    else if (materiaElegida == cupoMateria1 >= 20){
-        console.log ("No hay mas cupo para la materia.")
+function inscripcion(event){
+    misMaterias.push(event.target.getAttribute('cupo'))
+    renderCourse()
 }
-}*/
+function renderCourse(){
 
+    saveMisMateriasToStorage()
 
-
-
-
+    course.innerHTML = ''
+    }
+    function saveMisMateriasToStorage(){
+        localStorage.setItem('course', JSON.stringify(course))
+    }
+    
+    function loadCourseFromStorage(){
+        if(localStorage.getItem('course') !== null){
+            cart = JSON.parse(localStorage.getItem('course'))
+        }
+    }

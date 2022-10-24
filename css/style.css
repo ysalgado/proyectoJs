@@ -139,11 +139,18 @@
       color: #141a3d; }
 
 .card-body {
-  box-shadow: 0 0 20px 0 #515257; }
+  box-shadow: 0 0 8px 0 #515257;
+  border-radius: 5px; }
   .card-body .card-title {
     color: #253090; }
   .card-body .card-text {
     color: #515257; }
+
+#items {
+  margin: 5% 0 10% 1%; }
+
+#aside {
+  display: grid; }
 
 .terminos {
   text-align: center;
