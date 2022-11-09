@@ -28,10 +28,7 @@ const materiasInternacionales = [
 
 let ofertaAcademica = document.getElementById('items')
 let course = document.getElementById("course")
-/*let buttonEliminar = document.getElementById('eliminar')*/
 let misMaterias = []
-
-/*buttonEliminar.addEventListener('click', emptyButtonHandler)*/
 
 loadCourseFromStorage()
 renderCourse()
@@ -74,13 +71,13 @@ function renderCourse(){
     saveMisMateriasToStorage()
 
     course.innerHTML = ''
-    }
+
     function saveMisMateriasToStorage(){
-        localStorage.setItem('course', JSON.stringify(course))
+    localStorage.setItem('course', JSON.stringify(course))
     }
-    
-    function loadCourseFromStorage(){
-        if(localStorage.getItem('course') !== null){
-            cart = JSON.parse(localStorage.getItem('course'))
-        }
+} 
+function loadCourseFromStorage(){
+    if(localStorage.getItem('course') !== null){
+        course = JSON.parse(localStorage.getItem('course'))
     }
+}
